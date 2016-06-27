@@ -9,7 +9,6 @@ getFileStats = (path) ->
     Q.all files.map (file) ->
       Q.nfcall fs.stat, file
   .then (stats) ->
-    console.log 'file stats:'
     stats
 
 
