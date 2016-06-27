@@ -14,8 +14,10 @@ testUrl = 'http://nodejs.org/api/fs.html'
 Q.Promise( (resolve, reject, notify) ->
   request.get testUrl, (err, res) ->
     if err
+      console.log 'there is an error: ', err
       reject new Error('This is an error')
     else
+      console.log 'response is: ', res
       resolve res
 ).then (res) ->
   #console.log 'The response is ', res
